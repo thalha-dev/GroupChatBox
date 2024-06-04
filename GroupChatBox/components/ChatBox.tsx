@@ -12,6 +12,8 @@ export type ChatBoxProp = {
   messageColumnName: string | null;
   timeZone: string | null;
   dateColumnName: string | null;
+  userName: string | null;
+  userNameColumnName: string | null;
 };
 
 export const ChatBox: React.FC<ChatBoxProp> = React.memo(
@@ -24,6 +26,8 @@ export const ChatBox: React.FC<ChatBoxProp> = React.memo(
     projectIdColumnName,
     dateColumnName,
     timeZone,
+    userNameColumnName,
+    userName,
   }: ChatBoxProp): React.JSX.Element => {
     const [message, setMessage] = React.useState("");
 
@@ -76,6 +80,8 @@ export const ChatBox: React.FC<ChatBoxProp> = React.memo(
         await record.setValue(projectIdColumnName, projectId);
         //@ts-ignore
         await record.setValue(dateColumnName, getDateTimeString(timeZone));
+        //@ts-ignore
+        await record.setValue(userNameColumnName, userName);
 
         // @ts-ignore
         await record.save();

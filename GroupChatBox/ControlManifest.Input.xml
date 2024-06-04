@@ -31,6 +31,8 @@
     <property name="messageColumnName" display-name-key="Message_Column_Name" description-key="Message_Column_Name_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="dateColumnName" display-name-key="Date_Column_Name" description-key="Date_Column_Name_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="timeZone" display-name-key="TimeZone" description-key="ex: Asia/Kolkata" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="userName" display-name-key="UserName" description-key="User Name" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="userNameColumnName" display-name-key="User_Name_Column_Name" description-key="User Name Column Name in Dataset" of-type="SingleLine.Text" usage="input" required="true" />
     <resources>
       <code path="index.ts" order="1"/>
       <platform-library name="React" version="16.8.6" />

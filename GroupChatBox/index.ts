@@ -48,6 +48,8 @@ export class GroupChatBox
       messageColumnName: context.parameters.messageColumnName.raw,
       timeZone: context.parameters.timeZone.raw,
       dateColumnName: context.parameters.dateColumnName.raw,
+      userName: context.parameters.userName.raw,
+      userNameColumnName: context.parameters.userNameColumnName.raw,
     };
     return React.createElement(ChatBox, props);
   }
