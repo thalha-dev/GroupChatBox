@@ -1,5 +1,6 @@
 import * as React from "react";
 import { getDateTimeString } from "../utils/getDateTimeString";
+import Message from "./Message";
 
 type DataSet = ComponentFramework.PropertyTypes.DataSet;
 
@@ -30,6 +31,14 @@ export const ChatBox: React.FC<ChatBoxProp> = React.memo(
     userName,
   }: ChatBoxProp): React.JSX.Element => {
     const [message, setMessage] = React.useState("");
+    const messageContainerRef = React.useRef<HTMLDivElement>(null);
+
+    React.useEffect(() => {
+      if (messageContainerRef.current) {
+        messageContainerRef.current.scrollTop =
+          messageContainerRef.current.scrollHeight;
+      }
+    }, [chatDataset]);
 
     const records: {
       [id: string]: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord;
@@ -55,7 +64,29 @@ export const ChatBox: React.FC<ChatBoxProp> = React.memo(
         const chatMessage = record.getFormattedValue(
           messageColumnName as string,
         );
-        return <div key={recordId}>{chatMessage}</div>;
+        const userNameInRecord = record.getFormattedValue(
+          userNameColumnName as string,
+        );
+
+        const userEmailInRecord = record.getFormattedValue(
+          userEmailColumnName as string,
+        );
+
+        const createdDateTime = record.getFormattedValue(
+          dateColumnName as string,
+        );
+
+        return (
+          <Message
+            key={recordId}
+            recordId={recordId}
+            createdDateTime={createdDateTime}
+            userNameInRecord={userNameInRecord}
+            currentUserEmail={userEmail}
+            userEmailInRecord={userEmailInRecord}
+            chatMessage={chatMessage}
+          />
+        );
       });
 
     const handleMessageChange = (
@@ -105,7 +136,9 @@ export const ChatBox: React.FC<ChatBoxProp> = React.memo(
     return (
       <div>
         <h2>Chat Messages</h2>
-        <div>{chatMessageArray ? chatMessageArray : ""}</div>
+        <div className="all-message-container" ref={messageContainerRef}>
+          {chatMessageArray ? chatMessageArray : ""}
+        </div>
 
         <input
           type="text"

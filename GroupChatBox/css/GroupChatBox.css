@@ -1,0 +1,57 @@
+.all-message-container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
+  height: 500px;
+  overflow-y: auto;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: 2px solid #dbc8f7;
+  border-radius: 4px;
+}
+
+.message-container {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #dbc8f7;
+  padding: 0.35em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: 2px solid #574b7d;
+  border-radius: 15px;
+  max-width: 75%;
+}
+
+.current-user-message-container {
+  align-self: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  background: #574b7d;
+  color: #fcfff9;
+  border: 2px solid #dbc8f7;
+}
+
+.message-username-datetime-container {
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  font-size: 0.6rem;
+  background: #574b7d;
+  color: #fcfff9;
+  border-radius: 4px;
+}
+
+.current-user-message-container .message-username-datetime-container {
+  background: #dbc8f7;
+  color: #000;
+}
