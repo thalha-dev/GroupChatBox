@@ -26,6 +26,11 @@
     </data-set>
     <property name="userEmail" display-name-key="User_Email" description-key="User_Email_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="projectId" display-name-key="Project_ID" description-key="Project_ID_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="projectIdColumnName" display-name-key="Project_ID_Column_Name" description-key="Project_ID_Column_Name_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="userEmailColumnName" display-name-key="User_Email_Column_Name" description-key="User_Email_Column_Name_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="messageColumnName" display-name-key="Message_Column_Name" description-key="Message_Column_Name_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="dateColumnName" display-name-key="Date_Column_Name" description-key="Date_Column_Name_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="timeZone" display-name-key="TimeZone" description-key="ex: Asia/Kolkata" of-type="SingleLine.Text" usage="input" required="false" />
     <resources>
       <code path="index.ts" order="1"/>
       <platform-library name="React" version="16.8.6" />

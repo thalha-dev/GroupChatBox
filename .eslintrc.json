@@ -20,8 +20,8 @@
       "@typescript-eslint"
     ],
     "rules": {
-      "no-undef": "off",
-      "no-unused-vars": "off"
+      "no-unused-vars": "off",
+      "no-undef": ["warn"]
     },
     "settings": {
       "react": {

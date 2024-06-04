@@ -1,7 +1,8 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import * as React from "react";
-import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;
 import { ChatBox, ChatBoxProp } from "./components/ChatBox";
+import * as React from "react";
+
+import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;
 type DataSet = ComponentFramework.PropertyTypes.DataSet;
 
 export class GroupChatBox
@@ -42,6 +43,11 @@ export class GroupChatBox
       chatDataset: context.parameters.chatDataset,
       userEmail: context.parameters.userEmail.raw,
       projectId: context.parameters.projectId.raw,
+      userEmailColumnName: context.parameters.userEmailColumnName.raw,
+      projectIdColumnName: context.parameters.projectIdColumnName.raw,
+      messageColumnName: context.parameters.messageColumnName.raw,
+      timeZone: context.parameters.timeZone.raw,
+      dateColumnName: context.parameters.dateColumnName.raw,
     };
     return React.createElement(ChatBox, props);
   }
