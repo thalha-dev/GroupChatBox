@@ -98,8 +98,8 @@
 
 .message-send-button:hover,
 .message-send-button:focus {
-  background: #dbc8f7;
-  color: #574b7d;
+  background: #fff;
+  color: #000;
   cursor: pointer;
-  border: 2px solid #574b7d;
+  border: 2px solid #000;
 }

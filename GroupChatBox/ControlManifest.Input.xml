@@ -33,6 +33,28 @@
     <property name="timeZone" display-name-key="TimeZone" description-key="ex: Asia/Kolkata" of-type="SingleLine.Text" usage="input" required="false" />
     <property name="userName" display-name-key="UserName" description-key="User Name" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="userNameColumnName" display-name-key="User_Name_Column_Name" description-key="User Name Column Name in Dataset" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="controlWidth" display-name-key="Contol_Width" description-key="Set width of the contol" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="controlHeight" display-name-key="Contol_Height" description-key="Set height of the contol" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="messageBoxBackgroundColor" display-name-key="Message_box_background_color" description-key="Set background color of the message display box" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="messageBoxBorderColor" display-name-key="Message_box_Border_color" description-key="Set Border color of the message display box" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="userMessageBackgroundColor" display-name-key="User_Message_Background_Color" description-key="message bg of user" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="currentUserMessageBackgroundColor" display-name-key="Current_User_Message_Background_Color" description-key="message bg of current user" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="userMessageColor" display-name-key="User_Message_Color" description-key="message foreground color" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="currentUserMessageColor" display-name-key="Current_User_Message_Color" description-key="current user message foreground color" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="messageFontSize" display-name-key="Message_Font_Size" description-key="font size of the message" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="messageMetaDataFontSize" display-name-key="Message_Meta_Data_Font_Size" description-key="font size of the message meta data" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="userMetaMessageBackgroundColor" display-name-key="User_Meta_Message_Background_Color" description-key="meta message bg of user" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="currentUserMetaMessageBackgroundColor" display-name-key="Current_User_Meta_Message_Background_Color" description-key="meta message bg of current user" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="userMetaMessageColor" display-name-key="User_Meta_Message_Color" description-key="meta message foreground color" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="currentUserMetaMessageColor" display-name-key="Current_User_Meta_Message_Color" description-key="current user meta message foreground color" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="userMessageBorderColor" display-name-key="User_Message_Border_Color" description-key="message border color of user" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="currentUserMessageBorderColor" display-name-key="Current_User_Message_Border_Color" description-key="message border color of current user" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="inputBackgroundColor" display-name-key="Input_Background_Color" description-key="message input background color" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="inputColor" display-name-key="Input_Foreground_Color" description-key="message input color" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="inputBorderColor" display-name-key="Input_Border_Color" description-key="message border color" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="sendButtonBackgroundColor" display-name-key="Send_Button_Background_Color" description-key="message send button background color" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="sendButtonColor" display-name-key="Send_Button_Foreground_Color" description-key="message send button color" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="sendButtonBorderColor" display-name-key="Send_Button_Border_Color" description-key="message send button border color" of-type="SingleLine.Text" usage="input" required="false" />
     <resources>
       <code path="index.ts" order="1"/>
       <platform-library name="React" version="16.8.6" />
