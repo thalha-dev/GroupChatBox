@@ -1,6 +1,7 @@
 import * as React from "react";
 import { getDateTimeString } from "../utils/getDateTimeString";
 import Message from "./Message";
+import { IoMdArrowRoundUp } from "react-icons/io";
 
 type DataSet = ComponentFramework.PropertyTypes.DataSet;
 
@@ -134,20 +135,24 @@ export const ChatBox: React.FC<ChatBoxProp> = React.memo(
     };
 
     return (
-      <div>
-        <h2>Chat Messages</h2>
+      <div className="message-app-container">
         <div className="all-message-container" ref={messageContainerRef}>
           {chatMessageArray ? chatMessageArray : ""}
         </div>
 
-        <input
-          type="text"
-          placeholder="Name"
-          value={message}
-          onChange={handleMessageChange}
-          onKeyUp={handleKeyUp}
-        />
-        <button onClick={handleButtonClick}>Create Record</button>
+        <div className="message-input-container">
+          <input
+            className="message-input"
+            type="text"
+            placeholder="Name"
+            value={message}
+            onChange={handleMessageChange}
+            onKeyUp={handleKeyUp}
+          />
+          <button className="message-send-button" onClick={handleButtonClick}>
+            <IoMdArrowRoundUp />
+          </button>
+        </div>
       </div>
     );
   },
